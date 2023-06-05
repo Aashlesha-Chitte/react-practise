@@ -1,8 +1,13 @@
 import React from 'react';
-import { ClassComponents } from './pages';
+import {
+  ClassComponents, ErrorBoundryClass, ErrorPage,
+} from './pages';
 
 const App = () => (
-  <ClassComponents />
+  <ErrorBoundryClass>
+    <ClassComponents />
+    <ErrorPage />
+  </ErrorBoundryClass>
 );
 
 export default App;
